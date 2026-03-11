@@ -1,0 +1,35 @@
+AntiKnife Proprietary License
+
+Copyright (c) 2026 AntiKnife Contributors. All rights reserved.
+
+NOTICE: This software is proprietary and confidential.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the compiled binary form of this software (the "Software"), to use the 
+Software for personal or commercial purposes, subject to the following 
+conditions:
+
+1. RESTRICTIONS
+   You may NOT:
+   - Modify, adapt, translate, or create derivative works of the Software
+   - Reverse engineer, decompile, disassemble, or otherwise attempt to 
+     derive the source code of the Software
+   - Redistribute, sublicense, rent, lease, or lend the Software to any 
+     third party
+   - Remove or alter any proprietary notices, labels, or marks on the 
+     Software
+
+2. INTELLECTUAL PROPERTY
+   The Software and all copies thereof are proprietary to the copyright 
+   holders and title to all copies shall remain with the copyright holders.
+
+3. DISCLAIMER OF WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS 
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+4. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES 
+   OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR 
+   OTHER DEALINGS IN THE SOFTWARE.
