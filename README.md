@@ -5,8 +5,12 @@
 <h1 align="center">AntiKnife</h1>
 
 <p align="center">
-  <strong>Multi-account manager for Antigravity IDE</strong><br>
-  Seamlessly rotate between your Google accounts with zero interruption.
+  <strong>Multi-account manager & Network Optimizer for Antigravity IDE</strong><br>
+  Seamlessly rotate between your Google accounts with zero interruption and establish rock-solid connections.
+</p>
+
+<p align="center">
+  <a href="README.zh-CN.md">🌐 中文</a> | <strong>English</strong>
 </p>
 
 <p align="center">
@@ -23,50 +27,47 @@
 
 ---
 
-## ✨ Features
+## ✨ Highlights
 
-### 🔄 Automatic Token Rotation
-Manage multiple Google accounts and let AntiKnife automatically rotate tokens when quota limits are reached. No more manual switching — just keep coding.
+1. **Seamless Account Switching & Rotation** — Switch between Google accounts instantly with zero IDE restart required. Automatically rotate tokens when your current account's quota runs low to keep your flow uninterrupted.
+2. **Network Enhancement** — Features a robust streaming proxy that significantly mitigates EOF drops. Tailor your network settings to help navigate firewalls and interruptions for a more stable streaming connection.
+3. **Team Authorization** — Distribute a massive pool of tokens across an entire team via an exclusive remote mode and admin dashboard without ever sharing the underlying credentials.
+4. **Real-Time Quota Monitoring** — See your remaining limits and usage directly in the status bar across all model families (Gemini Pro, Flash, Claude), with color-coded alerts and countdowns.
 
-### 📊 Real-Time Quota Monitoring
-See your remaining quota at a glance, right in the status bar. Visual indicators show usage across all model families (Gemini Pro, Flash, Claude) so you always know where you stand.
+## 🚀 Features
 
-### 👥 Multi-Account Management
-- Add accounts via secure Google OAuth2 login  
-- Enable/disable individual accounts with one click  
-- Drag-and-drop to reorder account priority  
-- Automatic IDE account import  
+### ✨ 1. Seamless Account Switching
+- **Zero-restart:** Quickly switch between multiple active Google accounts on the fly.
+- **Auto-Rotation:** Let AntiKnife passively rotate to the next pooled account when you hit quota boundaries. 
+- **Pool Management:** Add, group, and securely authorize active Google accounts into your available pool.
 
-### ⚡ Smart Rotation Strategies
-- **Priority-based**: Use your preferred account first, fall back when quota runs low  
-- **Per-model tracking**: Separate quota monitoring for each AI model family  
-- **Configurable thresholds**: Set when to switch to the next account  
+### 🌐 2. Network Enhancement & Tweaks
+- **Network Optimization:** Custom Gemini streaming proxy tailored to significantly reduce mid-stream interrupts and network drops commonly seen from firewalls.
+- **Granular Net Control:** Easily toggle Fast, Stable, and Legacy networking presets, or fine-tune advanced connection and heartbeat strategies straight from the IDE settings to match your specific latency requirements.
 
-### 🖥️ Intuitive Sidebar Panel
-A dedicated sidebar panel gives you full control:
-- View all accounts with status and quota  
-- Switch active account instantly  
-- Monitor rotation status in real-time  
-- Access admin settings  
+### 🔑 3. Team Authorization & Remote Mode
+- **Remote Server Connections:** Connect to a remote team server via client keys. Administrators can securely distribute shared tokens natively.
+- **Built-in Admin Panel:** Manage your organization, allocate tokens securely with limits, and track per-member limits directly inside an integrated UI dashboard.
 
-### 🌐 Local & Remote Mode
-- **Local mode**: Everything runs on your machine  
-- **Remote mode**: Connect to a shared server for team account management  
+### 📊 4. Real-Time Quota Display
+- **Status Bar Integration:** Instantly verify your remaining queries for Claude, Gemini Pro, and Gemini Flash right in your IDE.
+- **Detailed Metrics:** Progress bars visualize utilization, tier boundaries, and the next limit reset timer.
+- **Custom Threshold Settings:** Decide exactly when AntiKnife warns you or autorotates (0% - 80%).
+
+![Local mode — accounts](assets/screenshots/local_accounts.png)
+
+![Remote mode — team](assets/screenshots/remote_accounts.png)
 
 ## 📦 Installation
 
 ### From Open VSX Registry
-
 Search for **AntiKnife** in the extension marketplace, or install directly:
-
-```
+```bash
 ext install ace.antiknife
 ```
 
 ### Manual Install
-
 Download the `.vsix` file from [Releases](https://github.com/ace-express/antiknife/releases), then:
-
 ```bash
 # In Antigravity IDE / VSCodium
 code --install-extension antiknife-x.x.x.vsix
@@ -74,23 +75,28 @@ code --install-extension antiknife-x.x.x.vsix
 
 ## 🚀 Getting Started
 
-1. Install AntiKnife from the extension marketplace  
-2. Click the **🔪 knife icon** in the activity bar  
-3. Click **Add Account** to sign in with your Google account  
-4. Add more accounts as needed  
-5. Click **Enable** to start automatic rotation  
+1. Install AntiKnife from the extension marketplace.
+2. Click the 🔪 knife icon in the activity bar.
+3. Your IDE's current Google account is auto-imported.
+4. Click **Add Account** to sign in with additional Google accounts.
+5. In Settings, enable **Account Rotation** for passive management, and **Network Enhancement** for optimal streaming.
+
+## 💻 Supported Platforms
+
+| OS | Architecture | VSCE Target |
+|----|-------------|-------------|
+| macOS | Apple Silicon (ARM64) | `darwin-arm64` |
+| macOS | Intel (x64) | `darwin-x64` |
+| Linux | x64 | `linux-x64` |
+| Linux | ARM64 | `linux-arm64` |
+| Windows | x64 | `win32-x64` |
+| Windows | ARM64 | `win32-arm64` |
 
 ## 🔧 Requirements
-
-- Antigravity IDE v1.85.0 or later (or any compatible VS Code fork)
+- Antigravity IDE v1.85.0 or later
 
 ## 🐛 Found a Bug?
-
 Please [open an issue](https://github.com/ace-express/antiknife/issues/new?template=bug_report.md) with steps to reproduce.
-
-## 💡 Feature Requests
-
-Have an idea? [Submit a feature request](https://github.com/ace-express/antiknife/issues/new?template=feature_request.md).
 
 ## 📄 License
 
