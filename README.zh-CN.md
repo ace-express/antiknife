@@ -5,12 +5,12 @@
 <h1 align="center">AntiKnife</h1>
 
 <p align="center">
-  <strong>专为 Antigravity IDE 打造的多账号无感管理与网络增强工具</strong><br>
-  在多个 Google 账号之间无缝轮换，享受极致流畅的串流环境，零打断编码。
+  <strong>专为 Antigravity IDE 打造的多账号管理与网络增强工具</strong><br>
+  在多个 Google 账号之间无缝轮换，享受极致稳定的流式连接，零中断编码。
 </p>
 
 <p align="center">
-  <strong>中文</strong> | <a href="README.md">🌐 English</a>
+  <strong>中文</strong> | <a href="README.md">English</a>
 </p>
 
 <p align="center">
@@ -27,65 +27,74 @@
 
 ---
 
-## ✨ 核心亮点
+## 核心亮点
 
-1. **无感账号切换 (Seamless Account Switching)** — 零重启，即刻在多个 Google 账号间无缝切换，并在额度耗尽时自动无感轮换下一个账号。
-2. **网络优化 (Network Enhancement)** — 强大的底层流式网络代理配置，大幅缓解因防火墙或连接不稳导致的串流中断，提供更优的连接体验。
-3. **团队授权 (Team Authorization)** — 跨设备团队资源共享，支持通过特定的 Remote 模式分发共用额度和鉴权，免去个人维护的麻烦。
-4. **账号额度展示 (Real-Time Quota Display)** — 实时追踪并在状态栏直观展示所有大模型（Gemini Pro / Flash / Claude）的剩余调用额度及重置倒计时。
+1. **无感账号切换** -- 零重启，在多个 Google 账号之间即时切换。当前账号额度不足时，自动静默轮换到下一个可用账号，编码流程不中断。
+2. **网络增强** -- 内置流式传输代理，专门针对 EOF 中断和流式断连进行优化。支持多种连接策略预设，即使在严苛的防火墙环境下也能保持稳定连接。
+3. **实时额度监控** -- 在状态栏直接展示所有模型系列（Claude / Gemini Pro / Gemini Flash）的剩余额度百分比，悬停查看逐模型进度条与重置倒计时。
+4. **团队授权** -- 通过专属 Remote 模式和管理后台，将共享 Token 池分发给整个团队，无需暴露底层凭证。
 
-## 🚀 功能特性
+## 功能特性
 
-### ✨ 1. 无感账号切换
-- **零重启切换:** 随时随地跨账号无感热切换，一键生效，无需繁琐重启 IDE。
-- **自动智能轮换:** 让 AntiKnife 成为您的专属管家。针对高频使用者，它会在检测到当前账号额度触底时，自动平滑轮换近乎无限的备用池。
-- **本地池管理:** 轻松导入您的所有 Google 账号，提供拖拽排序、自由启用/禁用的灵活手段。
+### 1. 账号切换与自动轮换
 
-### 🌐 2. 网络定制与增强优化
-- **专属流式优化:** 内置专为流传输定制的本地代理机制，有效缓解流中断等常见连接问题。
-- **高级自定义:** 提供对开发者友好的网络进阶设置选项，允许您根据实际网络质量自主微调数据传输与保活策略，适应极端特殊的网络状况。
+- **零重启切换：** 随时在多个 Google 账号之间即时切换，无需重启 IDE。
+- **自动轮换：** 当活跃账号的额度低于设定阈值时，自动静默切换到池中下一个可用账号。
+- **账号池管理：** 导入、排序、启用或禁用账号，支持可视化拖拽操作。
 
-### 🔑 3. 团队授权管控
-- **中心化连接系统:** 专属内置 Remote Mode 接入内部或者三方的中心化团队服务器。
-- **授权即用:** 管理员可统一安排上传、共享管理 Token 池，将生成的专属 Client Key 下发；开发者只用输入 Key 即可开箱即用。
-- **内置管控后台:** 管理员具有专属 Web 面板，随时下发或注销授权权限，统计组成员用量。
+![本地模式 -- 账号池管理，逐模型额度条与等级徽章](assets/screenshots/local_accounts.png)
 
-### 📊 4. 账号额度实时展示
-- **无缝状态栏整合:** 无需跳转打开系统浏览器，一抬头即可看清模型当下的配额用量情况。
-- **可视化悬浮仪表板:** 悬停查看多模型的用量百分比进度条与动态重置倒计时，全面掌握消耗水平。
-- **自适应阈值提醒:** 自定义轮换与提醒的安全警告线（0% - 80% 可调）。
+### 2. 网络增强
 
-![本地模式 — 管理账号，逐模型配额条、等级徽章与优先级排序](assets/screenshots/local_accounts.png)
+- **流式代理：** 内置专为 Gemini 流式传输定制的本地代理，大幅减少流中断和连接丢失。
+- **连接预设：** 提供极速、稳定、兼容等多种网络预设方案，也支持自定义连接参数和保活策略以适配特殊网络环境。
+- **联动自动轮换：** 网络增强与账号轮换协同工作 -- 连接失败时先以优化参数重试，再回退到下一个账号。
 
-![远程模式 — 团队模式](assets/screenshots/remote_accounts.png)
+![网络增强与自动轮换设置](assets/screenshots/network_enhance_auto_rotation.png)
 
-## 📦 安装说明
+### 3. 实时额度显示
+
+- **状态栏集成：** 无需离开编辑器，一眼看清 Claude、Gemini Pro、Gemini Flash 的剩余额度百分比。
+- **悬浮详情面板：** 等宽对齐的逐模型额度百分比、进度条和重置倒计时。
+- **可配置阈值：** 自定义在额度降至多少百分比（0% -- 80%）时触发预警或自动轮换。
+
+![额度详情悬浮窗 -- 逐模型额度条与重置倒计时](assets/screenshots/quota.png)
+
+### 4. 团队授权与远程模式
+
+- **远程服务器连接：** 通过 Tenant ID 和 Client Key 接入中心化团队服务器，客户端无需手动管理 Token。
+- **管理后台：** 管理 Token 池、分配客户端席位、设置有效期策略，并在集成面板中监控成员用量。
+
+![远程模式 -- 团队服务器连接](assets/screenshots/remote_accounts.png)
+
+## 安装说明
 
 ### 从 Open VSX 安装
+
 在扩展市场搜索 **AntiKnife** 进行安装，或执行：
 ```bash
 ext install ace.antiknife
 ```
 
 ### 手动安装
+
 从 [Releases](https://github.com/ace-express/antiknife/releases) 下载 `.vsix` 文件后导入：
 ```bash
-# 在终端中执行
 code --install-extension antiknife-x.x.x.vsix
 ```
 
-## 🚀 快速开始
+## 快速开始
 
-1. 从扩展市场安装 AntiKnife
-2. 点击应用活动栏的 🔪 图标，即可打开面板
-3. 你的 IDE 当前登录账号会被自动导入工具
-4. 点击 **Add Account** 开始授权绑定并引入所有的 Google 账号加入账号池
-5. 在左侧面板 Settings 设置项中，开启 **账号轮换** 来享受跨号，开启 **网络增强** 体验代理输出的稳定。
+1. 从扩展市场安装 AntiKnife。
+2. 点击活动栏中的 AntiKnife 图标，打开管理面板。
+3. IDE 当前登录的 Google 账号会被自动导入。
+4. 点击 **Add Account** 授权绑定更多 Google 账号到账号池。
+5. 在 Settings 中开启**账号轮换**实现自动切号，开启**网络增强**优化流式传输稳定性。
 
-## 💻 支持平台
+## 支持平台
 
 | 操作系统 | 架构 | VSCE 构建目标 |
-|---------|------|----------|
+|---------|------|-------------|
 | macOS | Apple Silicon (ARM64) | `darwin-arm64` |
 | macOS | Intel (x64) | `darwin-x64` |
 | Linux | x64 | `linux-x64` |
@@ -93,17 +102,20 @@ code --install-extension antiknife-x.x.x.vsix
 | Windows | x64 | `win32-x64` |
 | Windows | ARM64 | `win32-arm64` |
 
-## 🔧 环境要求
+## 环境要求
+
 - Antigravity IDE v1.85.0 及以上版本
 
-## 🐛 问题反馈
-如果你发现了 Bug 或是对工具有任何改进建议，欢迎提交 Issue 至 [GitHub 仓库](https://github.com/ace-express/antiknife/issues)。
+## 问题反馈
 
-## 📄 许可证
-AntiKnife 专有权闭源协议许可 — 详情请阅读目录下的 [LICENSE](LICENSE) 文档。
+发现 Bug 或有改进建议，欢迎在 [GitHub 仓库](https://github.com/ace-express/antiknife/issues) 提交 Issue。
+
+## 许可证
+
+AntiKnife 专有闭源协议 -- 详见 [LICENSE](LICENSE)。
 
 ---
 
 <p align="center">
-  Made with ❤️ for the Antigravity IDE community
+  Made for the Antigravity IDE community
 </p>
