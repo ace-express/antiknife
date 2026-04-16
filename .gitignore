@@ -1,0 +1,15 @@
+# Build artifacts
+*.vsix
+src/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Gemini / Agents
+.gemini/
+.agents/
