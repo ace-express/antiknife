@@ -30,9 +30,10 @@
 ## Highlights
 
 1. **Seamless Account Switching** -- Switch between Google accounts instantly with zero IDE restart. When your current account's quota runs low, AntiKnife automatically rotates to the next one in your pool to keep your workflow uninterrupted.
-2. **Network Enhancement** -- A built-in streaming proxy engineered to eliminate EOF drops and mid-stream disconnects. Fine-tune connection strategies to maintain rock-solid stability, even behind restrictive firewalls.
-3. **Real-Time Quota Monitoring** -- Live quota tracking across all model families (Claude, Gemini Pro, Gemini Flash) displayed directly in the status bar, with per-model progress bars, color-coded alerts, and reset countdowns.
-4. **Team Authorization** -- Distribute a shared token pool across your entire team through a dedicated remote mode and admin dashboard, without ever exposing the underlying credentials.
+2. **External LLM Providers** -- Bring your own API key and connect any OpenAI-compatible LLM provider. Use GPT, DeepSeek, or any third-party model alongside your Google accounts, all managed from one unified panel.
+3. **Network Enhancement** -- A built-in streaming proxy engineered to eliminate EOF drops and mid-stream disconnects. Fine-tune connection strategies to maintain rock-solid stability, even behind restrictive firewalls.
+4. **Real-Time Quota Monitoring** -- Live quota tracking across all model families (Claude, Gemini Pro, Gemini Flash) displayed directly in the status bar, with per-model progress bars, color-coded alerts, and reset countdowns.
+5. **Team Authorization** -- Distribute a shared token pool across your entire team through a dedicated remote mode and admin dashboard, without ever exposing the underlying credentials.
 
 ## Features
 
@@ -44,7 +45,15 @@
 
 ![Local mode -- account pool with per-model quota bars and tier badges](assets/screenshots/local_accounts.png)
 
-### 2. Network Enhancement
+### 2. External LLM Providers
+
+- **Bring your own key:** Connect any OpenAI-compatible API provider (OpenAI, DeepSeek, Groq, etc.) by simply entering an endpoint URL, API key, and model name.
+- **Unified management:** Add, edit, enable, or disable external providers right alongside your Google accounts in the same sidebar panel.
+- **Seamless routing:** When an external provider is active, requests are automatically routed through it -- no manual configuration changes needed.
+
+![External providers -- manage third-party LLM endpoints](assets/screenshots/provider.png)
+
+### 3. Network Enhancement
 
 - **Streaming proxy:** A purpose-built local proxy that intercepts and stabilizes Gemini streaming connections, significantly reducing mid-stream interruptions.
 - **Connection presets:** Choose between Fast, Stable, and Legacy networking profiles, or define custom connection and heartbeat parameters to match your exact network conditions.
@@ -52,7 +61,7 @@
 
 ![Network enhancement and auto-rotation settings](assets/screenshots/network_enhance_auto_rotation.png)
 
-### 3. Real-Time Quota Display
+### 4. Real-Time Quota Display
 
 - **Status bar integration:** See remaining quota percentages for Claude, Gemini Pro, and Gemini Flash at a glance without leaving your editor.
 - **Detailed hover tooltip:** A monospace-aligned breakdown of every model's quota percentage, progress bar, and reset countdown timer.
@@ -60,7 +69,7 @@
 
 ![Quota detail tooltip -- per-model quota bars and reset timers](assets/screenshots/quota.png)
 
-### 4. Team Authorization and Remote Mode
+### 5. Team Authorization and Remote Mode
 
 - **Remote server connection:** Connect to a centralized team server using a Tenant ID and Client Key. No manual token management required on the client side.
 - **Admin dashboard:** Manage tokens, allocate client seats, set expiration policies, and monitor per-member usage from an integrated panel.
